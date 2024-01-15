@@ -14,7 +14,6 @@ public class App {
 
 		String content = null;
 		String author = null;
-		String getDate = Util.getDate();
 
 		while (true) {
 			System.out.print("명령어 ) ");
@@ -22,13 +21,14 @@ public class App {
 
 			if (cmd.equals("등록")) {
 				int id = lastArticleId + 1;
+				String regDate = Util.regDate();
 
 				System.out.print("명언 : ");
 				content = sc.nextLine();
 				System.out.print("작가 : ");
 				author = sc.nextLine();
 
-				WiseSaying wisesaying = new WiseSaying(id, getDate, content, author);
+				WiseSaying wisesaying = new WiseSaying(id, regDate, content, author);
 				wisesayings.add(wisesaying);
 
 				System.out.printf("%d번 명언이 등록되었습니다.\n", id);
@@ -148,7 +148,7 @@ public class App {
 				}
 				
 				System.out.printf("번호 : %d\n", foundWisesaying.getId());
-				System.out.printf("날짜 : %s\n", getDate);
+				System.out.printf("날짜 : %s\n", foundWisesaying.getRegDate());
 				System.out.printf("작가 : %s\n", foundWisesaying.getAuthor());
 				System.out.printf("내용 : %s\n", foundWisesaying.getContent());
 

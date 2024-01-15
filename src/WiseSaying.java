@@ -2,25 +2,25 @@
 public class WiseSaying {
 	
 	private int id;
-	private String getDate;
+	private String regDate;
 	private String content;
 	private String author;
 
 
 
-	public WiseSaying(int id, String getDate, String content, String author) {
+	public WiseSaying(int id, String regDate, String content, String author) {
 		this.id = id;
-		this.getDate = getDate;
+		this.regDate = regDate;
 		this.content = content;
 		this.author = author;	
 		}
 
-	public String getGetDate() {
-		return getDate;
+	public String getRegDate() {
+		return regDate;
 	}
 
-	public void setGetDate(String getDate) {
-		this.getDate = getDate;
+	public void setRegDate(String getDate) {
+		this.regDate = getDate;
 	}
 
 	public int getId() {
